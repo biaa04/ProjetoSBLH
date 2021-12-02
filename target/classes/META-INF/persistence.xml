@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence>
+<persistence-unit name="PU"  transaction-type="RESOURCE_LOCAL">
+<provider>org.hibernate.ejb.HibernatePersistence</provider> 
+
+<class>model.Banda</class>
+<class>controller.ControllerBanda</class>
+<properties>
+<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/SBLH"/>
+<property name="javax.persistence.jdbc.user" value="root"/>
+<property name="javax.persistence.jdbc.password" value="senha"/>
+<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+<property name="hibernate.show_sql" value="true" />
+<property name="hibernate.format_sql" value="true" />
+</properties>
+</persistence-unit>
+</persistence>
