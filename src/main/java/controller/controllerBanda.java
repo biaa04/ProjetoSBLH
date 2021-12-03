@@ -32,7 +32,12 @@ public class controllerBanda extends HttpServlet {
 		if (action.equals("/main")) {
 			lBanda(request, response);
 		} else if(action.equals("/novabanda")){
-			novaBanda(request, response);
+			try {
+				novaBanda(request, response);
+			} catch (Exception e) {
+				
+				e.printStackTrace();
+			}
 				
 		}else {
 			response.sendRedirect("index.html");
@@ -43,9 +48,9 @@ public class controllerBanda extends HttpServlet {
 	protected void lBanda(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		ArrayList<Banda> listar = DB.listarbanda();
+		ArrayList<Banda>bandalista = DB.findAll();
 
-		response.sendRedirect("index.jsp");
+		//response.sendRedirect("index.jsp");
 	}
 	
 //nova banda
@@ -54,8 +59,9 @@ public class controllerBanda extends HttpServlet {
 
 		System.out.println(request.getParameter("nome"));
 		System.out.println(request.getParameter("genero"));
-		Banda banda = new Banda();
-		DB.salvar(banda);
+		
+		Banda bandan = new Banda();
+		DB.salvar(bandan);
 		
 		response.sendRedirect("main");
 	}

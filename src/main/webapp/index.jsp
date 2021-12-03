@@ -20,7 +20,7 @@
 
     
         <table >
-            <caption><h2>Lista de Bandas</h2></caption>
+            <h2>Lista de Bandas</h2>
             <tr>
                 <th>ID</th>
                 <th>Name</th>

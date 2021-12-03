@@ -2,11 +2,15 @@ package model;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+
+
+
 
 public class daoBanda {
 	public EntityManager getEM() {
@@ -36,6 +40,7 @@ public class daoBanda {
 	    }
 		
 		return banda;
+		
 	}	
 	
 	
@@ -82,10 +87,19 @@ public class daoBanda {
 		
 	}
 	
-	/*public ArrayList<Banda> listarbanda(){
-		String listando = "select * from banda order by idbanda";
-		
-	}*/
+	public ArrayList<Banda> findAll(){
+		EntityManager em = getEM();
+		List<Banda> bandalista = null;		
+try {
+	bandalista = em.createQuery("from Banda").getResultList();
+			
+		} catch (Exception e) {
+			 System.out.println(e);
+		} finally {
+			em.close();
+		}
+		return (ArrayList<Banda>) bandalista;
+	}
 	
 	
 	
