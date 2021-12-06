@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-
+import controller.Connection;
 
 
 
@@ -131,12 +131,12 @@ try {
 	
 	
 	
-//	public void remover(Banda banda) {
-//		em.getTransaction().begin();
-//		Query q = em.createNamedQuery("delete banda from banda where idbanda ="+banda.getNome());
-//		em.getTransaction().commit();
-//		emf.close();
-//	}
+	/*public void remover(Banda banda) {
+		em.getTransaction().begin();
+		Query q = em.createNamedQuery("delete banda from banda where idbanda ="+banda.getNome());
+		em.getTransaction().commit();
+		emf.close();
+	}*/
 	
 }
 
