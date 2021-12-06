@@ -1,4 +1,4 @@
-package controller;
+/*package controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -29,9 +29,9 @@ public class Servlet extends HttpServlet {
 		protected void doPost(HttpServletRequest request, HttpServletResponse response)
 	    throws ServletException, IOException {
 	        doGet(request, response);
-	    }
+	    }*/
 
-	    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	   /* protected void doGet(HttpServletRequest request, HttpServletResponse response)
 	    throws ServletException, IOException {
 	        String action = request.getServletPath();
 
@@ -40,11 +40,11 @@ public class Servlet extends HttpServlet {
 	                case "/novabanda":
 	                	insertBanda(request, response);
 	                 //   showNewForm(request, response);
-	                    break;
+	                    break;*/
 	               /* case "/insert":
 	                    insertBanda(request, response);
 	                    break;*/
-	                case "/delete":
+	               /* case "/delete":
 	                    deleteBanda(request, response);
 	                    break;
 	              //  case "/edit":
@@ -60,9 +60,9 @@ public class Servlet extends HttpServlet {
 	        } catch (SQLException ex) {
 	            throw new ServletException(ex);
 	        }
-	    }
+	    }*/
 
-	    private void listBanda(HttpServletRequest request, HttpServletResponse response)
+	   /* private void listBanda(HttpServletRequest request, HttpServletResponse response)
 	    throws SQLException, IOException, ServletException {
 	        List < Banda > listBanda = dao.findAll();
 	        request.setAttribute("listagem", listBanda);
@@ -87,7 +87,7 @@ public class Servlet extends HttpServlet {
 
 	    }*/
 
-	    private void insertBanda(HttpServletRequest request, HttpServletResponse response)
+	   /* private void insertBanda(HttpServletRequest request, HttpServletResponse response)
 	    throws SQLException, IOException {
 	        String name = request.getParameter("name");
 	        String genero = request.getParameter("genero");
@@ -118,4 +118,4 @@ public class Servlet extends HttpServlet {
 	        response.sendRedirect("list");
 	    }
 
-}
+}*/

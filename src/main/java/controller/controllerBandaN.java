@@ -1,4 +1,4 @@
-package controller;
+/*package controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -23,10 +23,10 @@ DaoBanda DB = new DaoBanda();
    
     public controllerBandaN() {
        super();
-    }
+    }*/
 
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	/*protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
@@ -46,9 +46,9 @@ DaoBanda DB = new DaoBanda();
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-	}
+	}*/
 	
-	 private void listBanda(HttpServletRequest request, HttpServletResponse response)
+	/* private void listBanda(HttpServletRequest request, HttpServletResponse response)
 			    throws SQLException, IOException, ServletException {
 			        List < Banda > listBanda = DB.findAll();
 			        request.setAttribute("listagem", listBanda);
@@ -73,7 +73,7 @@ DaoBanda DB = new DaoBanda();
 
 			    }*/
 
-			    private void insertBanda(HttpServletRequest request, HttpServletResponse response)
+			   /* private void insertBanda(HttpServletRequest request, HttpServletResponse response)
 			    throws SQLException, IOException {
 			        String name = request.getParameter("name");
 			        String genero = request.getParameter("genero");
@@ -89,10 +89,10 @@ DaoBanda DB = new DaoBanda();
 			        int id = Integer.parseInt(request.getParameter("id"));
 			        String name = request.getParameter("name");
 			        String genero = request.getParameter("genero");
-			       
+			       */
 
 			       // Banda banda = new Banda(name, genero);
-			        Banda banda = new Banda();
+			    /*    Banda banda = new Banda();
 			        dao.EditarBanda(banda);
 			        response.sendRedirect("list");
 			    }
@@ -105,4 +105,4 @@ DaoBanda DB = new DaoBanda();
 			    }
 
 
-}
+}*/
