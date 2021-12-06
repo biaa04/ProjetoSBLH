@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Banda;
-import model.daoBanda;
+import model.DaoBanda;
 
 
-@WebServlet(urlPatterns = { "/controllerBanda", "/main", "/novabanda" })
-public class controllerBanda extends HttpServlet {
+@WebServlet(urlPatterns = { "/ControllerBanda", "/main", "/novabanda" })
+public class ControllerBanda extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	daoBanda DB = new daoBanda();
+	DaoBanda DB = new DaoBanda();
 
-	public controllerBanda() {
+	public ControllerBanda() {
 		super();
 
 	}
@@ -50,7 +50,7 @@ public class controllerBanda extends HttpServlet {
 		
 		ArrayList<Banda>bandalista = DB.findAll();
 
-		//response.sendRedirect("index.jsp");
+		response.sendRedirect("index.jsp");
 	}
 	
 //nova banda
@@ -60,8 +60,8 @@ public class controllerBanda extends HttpServlet {
 		System.out.println(request.getParameter("nome"));
 		System.out.println(request.getParameter("genero"));
 		
-		Banda bandan = new Banda();
-		DB.salvar(bandan);
+		Banda banda = new Banda();
+		DB.salvar(banda);
 		
 		response.sendRedirect("main");
 	}

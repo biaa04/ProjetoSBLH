@@ -12,7 +12,7 @@ import javax.persistence.Query;
 
 
 
-public class daoBanda {
+public class DaoBanda {
 	public EntityManager getEM() {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
 		return factory.createEntityManager();
@@ -27,7 +27,7 @@ public class daoBanda {
 		//emf = Persistence.createEntityManagerFactory("PU");
 		//em = emf.createEntityManager();
 	}*/
-	public Banda salvar(Banda banda) throws Exception {
+	/*public Banda salvar(Banda banda) throws Exception {
 		EntityManager em = getEM();
 	try {
 		 em.getTransaction().begin();
@@ -58,6 +58,30 @@ public class daoBanda {
 		
 		return banda;
 		
+	}*/
+	
+	public Banda salvar(Banda banda) throws Exception {
+		EntityManager em = getEM();
+	try {
+		 em.getTransaction().begin();
+		 if(banda.getIdbanda() == null) {
+		 em.persist(banda);
+		 }else {
+			 if(!em.contains(banda)) {
+				 if(em.find(Banda.class, banda.getIdbanda()) == null){
+					 throw new Exception ("Erro ao atualizar");
+				 }
+			 }
+			 banda = em.merge(banda);
+		 }
+		 em.getTransaction().commit();
+		
+	    // em.getTransaction().rollback();  
+		} finally {
+	        em.close();
+	    }
+		
+		return banda;
 	}
 	
 	public void remove(Long idbanda) {

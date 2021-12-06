@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import jakarta.servlet.RequestDispatcher;
 import model.Banda;
-import model.daoBanda;
+import model.DaoBanda;
 
 
 //@WebServlet("/controllerBanda")
 //@WebServlet(urlPatterns = {"/novabanda","/update"})
 public class controllerBandaN extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-daoBanda DB = new daoBanda();
+DaoBanda DB = new DaoBanda();
    
     public controllerBandaN() {
        super();

@@ -1,7 +1,7 @@
 package teste;
 
 import model.Banda;
-import model.daoBanda;
+import model.DaoBanda;
 
 public class Teste2 {
 	public static void main(String[]args) throws Exception {
@@ -10,7 +10,7 @@ public class Teste2 {
 		b.setGenero("Rock");
 		//b.setIdbanda(1L);
 		
-		daoBanda db = new daoBanda();
+		DaoBanda db = new DaoBanda();
 		b = db.salvar(b);
 		System.out.println("Banda"+ b.getNome()+ " salva");
 		
